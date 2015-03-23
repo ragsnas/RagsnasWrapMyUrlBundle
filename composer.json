@@ -1,0 +1,13 @@
+{
+  "name": "ragsnas/RagsnasWrapMyUrlBundle",
+  "type": "symfony-bundle",
+  "description": "Bundle for wrapping URL's to help with integration",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.3.2",
+    "symfony/framework-bundle": "~2.1"
+  },
+  "autoload": {
+    "psr-4": { "Ragsnas\\RagsnasWrapMyUrlBundle\\": "" }
+  }
+}
