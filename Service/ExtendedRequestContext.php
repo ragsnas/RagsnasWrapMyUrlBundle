@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ragsnas\WrapMyUrlBundle\Service;
+namespace Ragsnas\RagsnasWrapMyUrlBundle\Service;
 
 use Symfony\Component\HttpFoundation\Request;
 

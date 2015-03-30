@@ -1,6 +1,6 @@
 <?php
 
-namespace Ragsnas\WrapMyUrlBundle\Service;
+namespace Ragsnas\RagsnasWrapMyUrlBundle\Service;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\Routing\Generator\UrlGenerator as SymfonyUrlGenerator;

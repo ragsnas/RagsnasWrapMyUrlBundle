@@ -1,6 +1,6 @@
 <?php
 
-namespace Ragsnas\WrapMyUrlBundle;
+namespace Ragsnas\RagsnasWrapMyUrlBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

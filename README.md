@@ -7,9 +7,9 @@ It uses Information given via the Request to wrap Url's. This can be used to acc
 To use it, you'll have to overwrite some parameters in your config:
 
     parameters:
-        router.request_context.class: Ragsnas\WrapMyUrlBundle\Service\ExtendedRequestContext
-        router.options.generator_class: Ragsnas\WrapMyUrlBundle\Service\UrlGenerator
-        router.options.generator_base_class: Ragsnas\WrapMyUrlBundle\Service\UrlGenerator
+        router.request_context.class: Ragsnas\RagsnasWrapMyUrlBundle\Service\ExtendedRequestContext
+        router.options.generator_class: Ragsnas\RagsnasWrapMyUrlBundle\Service\UrlGenerator
+        router.options.generator_base_class: Ragsnas\RagsnasWrapMyUrlBundle\Service\UrlGenerator
 
 If you want to make use of the javascript overwrite as well (overwrites XHR Requests) you'll also have to include the overwrite.js.
 
