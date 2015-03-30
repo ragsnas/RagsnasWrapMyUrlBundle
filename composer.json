@@ -1,5 +1,5 @@
 {
-  "name": "ragsnas/RagsnasWrapMyUrlBundle",
+  "name": "ragsnas/WrapMyUrlBundle",
   "type": "symfony-bundle",
   "description": "Bundle for wrapping URL's to help with integration",
   "license": "MIT",
