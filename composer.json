@@ -8,6 +8,6 @@
     "symfony/framework-bundle": "~2.1"
   },
   "autoload": {
-    "psr-4": { "Ragsnas\\RagsnasWrapMyUrlBundle\\": "" }
+    "psr-4": { "Ragsnas\\WrapMyUrlBundle\\": "" }
   }
 }
