@@ -3,7 +3,7 @@
  */
 var ragsnasWrapMyUrlBundleRrewriteBaseUrl,
     ragsnasWrapMyUrlBundleRewriteUrlEncode,
-    ragsnasWrapMyUrlBundleLeaveUntouched = [];
+    ragsnasWrapMyUrlBundleLeaveUntouched;
 
 (function() {
     if (typeof ragsnasWrapMyUrlBundleRrewriteBaseUrl !== 'undefined') {
