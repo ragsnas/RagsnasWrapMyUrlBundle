@@ -6,7 +6,7 @@
     "a.schuermann <a.schuermann@neusta.de>"
   ],
   "main": [
-    "Resources/public/js/overwrite.js"
+    "Resources/public/js/overwrites.js"
   ],
   
   "description": "Ragsnas WrapMyUrlBundle",
