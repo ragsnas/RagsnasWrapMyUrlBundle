@@ -5,6 +5,10 @@
   "authors": [
     "a.schuermann <a.schuermann@neusta.de>"
   ],
+  "main": [
+    "Resources/public/js/overwrite.js"
+  ],
+  
   "description": "Ragsnas WrapMyUrlBundle",
   "license": "MIT",
   "ignore": [
