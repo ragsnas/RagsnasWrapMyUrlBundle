@@ -8,7 +8,7 @@
   "description": "Ragsnas WrapMyUrlBundle",
   "license": "MIT",
   "ignore": [
-	"DependencyInjection"
+	"DependencyInjection",
     "**/*.php",
     "**/*.twig.html",
     ".idea",
