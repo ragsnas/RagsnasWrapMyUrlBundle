@@ -1,0 +1,20 @@
+{
+  "name": "ragsnas-wrap-my-url-bundle",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ragsnas/RagsnasWrapMyUrlBundle",
+  "authors": [
+    "a.schuermann <a.schuermann@neusta.de>"
+  ],
+  "description": "Ragsnas WrapMyUrlBundle",
+  "license": "MIT",
+  "ignore": [
+	"DependencyInjection"
+    "**/*.php",
+    "**/*.twig.html",
+    ".idea",
+    "node_modules",
+    "Resources/config",
+    "Service",
+    "Tests"
+  ]
+}
