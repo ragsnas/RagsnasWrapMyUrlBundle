@@ -9,7 +9,7 @@ var ragsnasWrapMyUrlBundleRrewriteBaseUrl,
     if (typeof ragsnasWrapMyUrlBundleRrewriteBaseUrl !== 'undefined') {
         var proxied = window.XMLHttpRequest.prototype.open;
         window.XMLHttpRequest.prototype.open = function() {
-            if (ragsnasWrapMyUrlBundleLeaveUntouched.length > 0) {
+            if (typeof ragsnasWrapMyUrlBundleLeaveUntouched !== 'undefined' && ragsnasWrapMyUrlBundleLeaveUntouched.length > 0) {
                 for (var i = 0; i < ragsnasWrapMyUrlBundleLeaveUntouched.length ;i++) {
                     if (arguments[1].substring(0, ragsnasWrapMyUrlBundleLeaveUntouched[i].length) === ragsnasWrapMyUrlBundleLeaveUntouched[i]) {
                         return proxied.apply(this, [].slice.call(arguments));
