@@ -21,7 +21,7 @@ class UrlGenerator extends SymfonyUrlGenerator
         }
         $path = parent::doGenerate($variables, $defaults, $requirements, $tokens, $parameters, $name, $referenceType, $hostTokens, $requiredSchemes);
 
-        if (!$doNotWrap && $this->context->getWrapMyUrlWrap()) {
+        if (!$doNotWrap && $this->context->getWrapMyUrlWrap() && stripos(strtolower($path), 'sf2path') === false) {
             return sprintf(
                 $this->context->getWrapMyUrlWrap(),
                 ($this->context->isWrapMyUrlUrlencode() ? urlencode($path) : $path)
