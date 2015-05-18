@@ -16,8 +16,10 @@ var ragsnasWrapMyUrlBundleRrewriteBaseUrl,
                     }
                 }
             }
-            var newUrl = ragsnasWrapMyUrlBundleRrewriteBaseUrl;
-            arguments[1] = newUrl.replace('%s', (ragsnasWrapMyUrlBundleRewriteUrlEncode ? encodeURIComponent(arguments[1]) : arguments[1]));
+            if(arguments[1].toLowerCase().indexOf('sf2path') === -1) {
+                var newUrl = ragsnasWrapMyUrlBundleRrewriteBaseUrl;
+                arguments[1] = newUrl.replace('%s', (ragsnasWrapMyUrlBundleRewriteUrlEncode ? encodeURIComponent(arguments[1]) : arguments[1]));
+            }
 
             return proxied.apply(this, [].slice.call(arguments));
         };
