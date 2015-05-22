@@ -21,13 +21,21 @@ class UrlGenerator extends SymfonyUrlGenerator
         }
         $path = parent::doGenerate($variables, $defaults, $requirements, $tokens, $parameters, $name, $referenceType, $hostTokens, $requiredSchemes);
 
-        if (!$doNotWrap && $this->context->getWrapMyUrlWrap() && stripos(strtolower($path), 'sf2path') === false) {
-            return sprintf(
-                $this->context->getWrapMyUrlWrap(),
-                ($this->context->isWrapMyUrlUrlencode() ? urlencode($path) : $path)
+        if (!$doNotWrap && $this->context->getWrapMyUrlWrap()) {
+            return str_replace(
+                [
+                    parse_url($this->context->getWrapMyUrlWrap(), PHP_URL_SCHEME) . '://',
+                    '%s'
+                ],
+                [
+                    (parse_url($path, PHP_URL_SCHEME) ?: 'http') . '://',
+                    ($this->context->isWrapMyUrlUrlencode() ? urlencode($path) : $path)
+                ],
+                $this->context->getWrapMyUrlWrap()
             );
         }
 
         return $path;
     }
 }
+
