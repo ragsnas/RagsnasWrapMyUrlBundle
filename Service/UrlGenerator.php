@@ -23,14 +23,8 @@ class UrlGenerator extends SymfonyUrlGenerator
 
         if (!$doNotWrap && $this->context->getWrapMyUrlWrap()) {
             return str_replace(
-                [
-                    parse_url($this->context->getWrapMyUrlWrap(), PHP_URL_SCHEME) . '://',
-                    '%s'
-                ],
-                [
-                    (parse_url($path, PHP_URL_SCHEME) ?: 'http') . '://',
-                    ($this->context->isWrapMyUrlUrlencode() ? urlencode($path) : $path)
-                ],
+                '%s',
+                ($this->context->isWrapMyUrlUrlencode() ? urlencode($path) : $path),
                 $this->context->getWrapMyUrlWrap()
             );
         }
