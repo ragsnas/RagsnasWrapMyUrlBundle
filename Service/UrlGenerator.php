@@ -19,14 +19,19 @@ class UrlGenerator extends SymfonyUrlGenerator
             $doNotWrap = true;
             unset ($parameters['do-not-wrap']);
         }
+
         $path = parent::doGenerate($variables, $defaults, $requirements, $tokens, $parameters, $name, $referenceType, $hostTokens, $requiredSchemes);
 
         if (!$doNotWrap && $this->context->getWrapMyUrlWrap()) {
-            return str_replace(
+            $newUrl = str_replace(
                 '%s',
                 ($this->context->isWrapMyUrlUrlencode() ? urlencode($path) : $path),
                 $this->context->getWrapMyUrlWrap()
             );
+            if (stripos($path, 'https') === 0) {
+                $newUrl = preg_replace('=^http\:=si', 'https:', $newUrl);
+            }
+            return $newUrl;
         }
 
         return $path;
